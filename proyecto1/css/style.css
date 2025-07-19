@@ -1,0 +1,36 @@
+body {
+  background: linear-gradient(to right, #001f3f, #003366);
+  color: white;
+  font-family: sans-serif;
+}
+
+.card-login {
+  background-color: #ffffff;
+  color: black;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+.benefits i {
+  color: #00ff88;
+}
+
+.btn-login {
+  background-color: #ff6b6b;
+  border: none;
+}
+
+.btn-login:hover {
+  background-color: #e85c5c;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo i {
+  margin-right: 10px;
+}
