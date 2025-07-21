@@ -9,7 +9,6 @@ if (isset($_POST['email'])) {
     $email      = $_POST['email'];
     $clave      = $_POST['clave'];
 
-    // Validar email duplicado con consulta preparada
     $stmt = $con->prepare("SELECT id FROM usuarios WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -22,10 +21,8 @@ if (isset($_POST['email'])) {
     }
     $stmt->close();
 
-    // Encriptar la clave
     $clave_encriptada = password_hash($clave, PASSWORD_DEFAULT);
 
-    // Insertar usuario con consulta preparada
     $stmt = $con->prepare("INSERT INTO usuarios (nombre, apellido, fecha, telefono, email, pass) VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("ssssss", $nombre, $apellido, $fecha_nac, $telefono, $email, $clave_encriptada);
 

@@ -12,7 +12,6 @@
 </head>
 <body>
 
-  <!-- HEADER FIJO -->
   <header class="p-3 border-bottom bg-dark fixed-top">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-between">
@@ -36,11 +35,11 @@
     </div>
   </header>
 
-  <!-- REGISTRO -->
+
   <main class="d-flex align-items-center justify-content-center mt-5 pt-5" style="min-height: 100vh;">
     <div class="container d-flex flex-column flex-md-row align-items-center justify-content-center gap-5">
 
-      <!-- Beneficios -->
+ 
       <div class="text-white benefits">
         <div class="d-flex align-items-center mb-4 logo">
           <i class="fa-solid fa-scissors fa-2x"></i>
@@ -54,7 +53,7 @@
         </ul>
       </div>
 
-      <!-- Formulario -->
+
       <div class="card-login shadow">
         <h4 class="text-center mb-3">Crear cuenta</h4>
         <form action="registros.php" method="POST">
@@ -90,7 +89,6 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
   <footer class="bg-dark text-center text-white py-4 border-top">
     <div class="container">
       <p>&copy; 2025 Barbería Estilo. Todos los derechos reservados.</p>

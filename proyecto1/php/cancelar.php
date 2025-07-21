@@ -14,7 +14,7 @@ if ($id_turno <= 0) {
     die("ID de turno no válido.");
 }
 
-// Marcar como cancelado
+
 $sql = "UPDATE turnos SET estado = 'cancelado' WHERE id = ? AND usuario_id = ?";
 $stmt = $con->prepare($sql);
 $stmt->bind_param("ii", $id_turno, $usuario_id);

@@ -1,8 +1,6 @@
 <?php
 session_start();
 include 'conexion.php';
-
-// Asegurar que el usuario esté logueado
 if (!isset($_SESSION['usuario_id'])) {
     header("Location: login.php");
     exit();
@@ -29,8 +27,6 @@ $turno = $resultado->fetch_assoc();
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-<!-- Menú igual al index -->
 <header class="p-3 border-bottom bg-dark fixed-top">
   <div class="container d-flex justify-content-between align-items-center">
      <img src="../img/T.O.png" alt="Logo" style="height: 60px;">

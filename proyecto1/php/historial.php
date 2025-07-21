@@ -25,7 +25,7 @@ $resultado = $stmt->get_result();
 </head>
 <body>
 
-<!-- Menú -->
+
 <header class="p-3 border-bottom bg-dark fixed-top">
   <div class="container d-flex justify-content-between align-items-center">
      <img src="../img/T.O.png" alt="Logo" style="height: 60px;">

@@ -21,7 +21,7 @@ $descripcion = $_POST['descripcion'];
 $barbero = $_POST['barbero'];
 $whatsapp = isset($_POST['whatsapp']) ? 1 : 0;
 
-// Actualizar el turno si pertenece al usuario
+
 $sql = "UPDATE turnos SET fecha = ?, hora = ?, servicio = ?, descripcion = ?, barbero = ?, whatsapp = ? WHERE id = ? AND usuario_id = ?";
 $stmt = $con->prepare($sql);
 $stmt->bind_param("sssssiis", $fecha, $hora, $servicio, $descripcion, $barbero, $whatsapp, $id_turno, $usuario_id);

@@ -11,6 +11,7 @@ include 'conexion.php';
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Flatpickr CSS  libreria-->
+   
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
   <link rel="stylesheet" href="css/style.css">
@@ -90,10 +91,10 @@ if (isset($_SESSION['usuario_id'])) {
         <div class="card-login shadow bg-white p-4 rounded" style="min-width: 320px; max-width: 420px;">
           <h4 class="text-center mb-3 text-dark">Reservar Turno</h4>
           <form action="reservar_turno.php" method="POST">
-            <div class="mb-3">
-              <label for="fecha_turno" class="form-label text-dark">Fecha del turno</label>
-              <input type="date" class="form-control" id="fecha_turno" name="fecha_turno" required min="<?= date('Y-m-d') ?>">
-            </div>
+           <div class="mb-3">
+  <label for="fecha_turno" class="form-label text-dark">Fecha del turno</label>
+  <input type="text" class="form-control" id="fecha_turno" name="fecha_turno" required>
+</div>
             <div class="mb-3">
               <label for="hora_turno" class="form-label text-dark">Hora</label>
               <input type="time" class="form-control" id="hora_turno" name="hora_turno" required>
@@ -154,11 +155,11 @@ if (isset($_SESSION['usuario_id'])) {
   </div>
 <?php endif; ?>
 
-<!-- Secciones extra -->
+
 <section id="servicios" class="py-5 bg-secondary text-white">
   </section>
 
-  <!-- Footer -->
+ 
   <footer class="bg-dark text-center text-white py-4 border-top">
     <div class="container">
       <p>&copy; 2025 Barbería Estilo. Todos los derechos reservados.</p>
@@ -170,5 +171,20 @@ if (isset($_SESSION['usuario_id'])) {
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/horario.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    flatpickr("#fecha_turno", {
+      dateFormat: "Y-m-d",
+      minDate: "today",
+      disable: [
+        function(date) { return date.getDay() === 0; } // Deshabilitar domingos
+      ],
+      locale: {
+        firstDayOfWeek: 1
+      }
+    });
+  });
+</script>
 </body>
 </html>

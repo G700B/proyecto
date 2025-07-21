@@ -33,9 +33,8 @@ if ($stmt === false) {
 $stmt->bind_param("isssisds", $usuario_id, $fecha, $hora, $servicio, $descripcion, $barbero, $whatsapp, $creado_en);
 
 if ($stmt->execute()) {
-    // ✅ Mensaje JS y redirección
     echo "<script>
-            alert('✅ Turno registrado con éxito');
+            alert('Turno registrado con éxito');
             window.location.href = 'index2.php';
           </script>";
     exit();

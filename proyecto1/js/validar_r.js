@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const emailInput = document.getElementById("email");
   const claveInput = document.getElementById("clave");
 
-  // Validar mientras se escribe
+
   emailInput.addEventListener("input", function () {
     const val = emailInput.value.trim();
     if (!val.endsWith("@gmail.com")) {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Validar al enviar el formulario también
+
   form.addEventListener("submit", function (e) {
     let valid = true;
 
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Función para mostrar error en rojo debajo del input
+
   function mostrarError(input, mensaje) {
     input.classList.add("is-invalid");
     input.classList.remove("is-valid");
@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
     feedback.textContent = mensaje;
   }
 
-  // Función para limpiar el error y marcar como válido
   function limpiarError(input) {
     input.classList.remove("is-invalid");
     input.classList.add("is-valid");

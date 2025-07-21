@@ -37,7 +37,6 @@ $turno = $resultado->fetch_assoc();
 </head>
 <body>
 
-<!-- Menú/header igual al index -->
 <header class="p-3 border-bottom bg-dark fixed-top">
   <div class="container d-flex justify-content-between align-items-center">
      <img src="../img/T.O.png" alt="Logo" style="height: 60px;">
@@ -67,8 +66,8 @@ $turno = $resultado->fetch_assoc();
   </div>
 </header>
 
-<!-- Formulario de edición -->
-<main class="container pt-5 mt-5">
+
+ <main class="container pt-5 mt-5">
     <h2 class="mb-4 text-center text-white">Editar Turno</h2>
     <form action="actualizar_turno.php" method="POST" class="bg-light text-dark p-4 rounded shadow mx-auto" style="max-width: 600px;">
         <input type="hidden" name="turno_id" value="<?= $turno['id'] ?>">
